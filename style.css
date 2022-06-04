@@ -78,8 +78,10 @@ background-color: blanchedalmond;
 }
 .gameover{
     position: absolute;
-    font-weight: 900;
-    font-size: 250px;
+    top:60px;
+    right:40vw;
+    font-weight: 400;
+    font-size: 50px;
     display:none;
 }
 #turn{
