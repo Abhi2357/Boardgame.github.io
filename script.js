@@ -2,6 +2,7 @@ console.log("welcome to my world");
 // console.time("time");
 var arr = [42, 43, 44, 45, 46, 47, 48];
 var a = Array(49).fill(5);
+var gameover=0;
 var turn = 0;
 var changeturn=document.getElementById("color");
 var boxer = document.getElementsByClassName("boxer");
@@ -44,6 +45,7 @@ Array.from(boxer).forEach((element, index) => {
             if (checkwin(m) == 1) {
                 document.getElementById("gameover").style.display="block";
                 console.log("gameover");
+                gameover=1;
             
             };
         }
@@ -150,6 +152,8 @@ function rdia(m) {
     return false;
 }
 function possible(index) {
+    if(gameover==1)
+    return false;
     for (j = 0; j < arr.length; j++) {
         if (index == arr[j])
             return true;
