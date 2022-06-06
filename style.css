@@ -79,7 +79,15 @@ background-color: blanchedalmond;
 .gameover{
     position: absolute;
     top:60px;
-    right:40vw;
+    right:44vw;
+    font-weight: 400;
+    font-size: 50px;
+    display:none;
+}
+.draw{
+    position: absolute;
+    top:100px;
+    right:46vw;
     font-weight: 400;
     font-size: 50px;
     display:none;

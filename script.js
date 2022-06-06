@@ -41,12 +41,18 @@ Array.from(boxer).forEach((element, index) => {
             c = index - 7;
             i = arr.indexOf(index);
             arr.splice(i, 1, c);
+            
             // console.log(index);
             if (checkwin(m) == 1) {
                 document.getElementById("gameover").style.display="block";
                 console.log("gameover");
                 gameover=1;
-            
+            }
+            if (drawcheck(arr)==1 && gameover==0)
+            {
+                document.getElementById("draw").style.display="block";
+                console.log("draw");
+
             };
         }
     }
@@ -55,11 +61,21 @@ Array.from(boxer).forEach((element, index) => {
 console.log(newgame);
 newgame.addEventListener("click",()=>{
     a=confirm("Are you sure you want to reset this game");
-    if(a)
+    if(arr)
     {window.location.reload(true)};
 })
 function exit(){
     console.log("exit");
+}
+
+
+function drawcheck(arr) {
+    for(i=0;i<7;i++)
+    {
+       if(arr[i]>=0)
+       return false; 
+    }
+    return true;
 }
 
 function checkwin(m) {
