@@ -52,7 +52,7 @@ Array.from(boxer).forEach((element, index) => {
 })
 console.log(newgame);
 newgame.addEventListener("click",()=>{
-    a=confirm("Are you sure you want to leave this game");
+    a=confirm("Are you sure you want to reset this game");
     if(a)
     {window.location.reload(true)};
 })
